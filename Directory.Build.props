@@ -6,7 +6,7 @@
 		<Copyright>Copyright © 2022 - SpaceX Launch Plan Web</Copyright>
 
 		<RepositoryType>git</RepositoryType>
-		<RepositoryUrl></RepositoryUrl>
+		<RepositoryUrl>https://github.com/martinatanasov0204/spacex-launch-plan-web.git</RepositoryUrl>
 		
 		<LangVersion>10.0</LangVersion>
 		<Nullable>enable</Nullable>

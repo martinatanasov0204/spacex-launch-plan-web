@@ -1,0 +1,15 @@
+<Project>
+
+	<PropertyGroup>
+		<Product>SpaceX.Launch.Plan.Web</Product>
+		<ProductVersion>2022</ProductVersion>
+		<Copyright>Copyright © 2022 - SpaceX Launch Plan Web</Copyright>
+
+		<RepositoryType>git</RepositoryType>
+		<RepositoryUrl></RepositoryUrl>
+		
+		<LangVersion>10.0</LangVersion>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+</Project>

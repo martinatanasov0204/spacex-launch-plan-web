@@ -1,6 +1,8 @@
 
-.vs/
+.vs/*
 
 [Bb]in/
 [Oo]bj/
-*.user
+**/*.user
+
+**/*.suo

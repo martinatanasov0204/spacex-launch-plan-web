@@ -1,0 +1,44 @@
+﻿@{
+    ViewData["Title"] = "Launches Page";
+}
+
+<h2>Upcoming Launches</h2>
+
+<div class="text-center">
+    <br />
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Date/Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                if (Model is null)
+			    {
+			    	<tr>
+			    		<td colspan="3">
+			    			No upcoming launches
+			    		</td>
+                    </tr>
+                }
+                else
+                {
+                    int currentRow = 1;
+                    foreach (var item in Model)
+                    {
+                        <tr>
+                            <th scope="row">@currentRow</th>
+                            <td>@item.Name</td>
+                            <td>@item.DateUtc</td>
+                        </tr>
+
+                        currentRow++;
+                    }   
+                }
+            }
+        </tbody>
+    </table>
+</div>

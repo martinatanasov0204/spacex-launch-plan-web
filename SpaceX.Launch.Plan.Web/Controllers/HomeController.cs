@@ -7,6 +7,7 @@ namespace SpaceX.Launch.Plan.Web.Controllers
     /// <summary>
 	/// Represents a home controller for the SpaceX Launch Plan.
 	/// </summary>
+    [Route("")]
     public class HomeController : Controller
     {
         /// <summary>
@@ -17,9 +18,11 @@ namespace SpaceX.Launch.Plan.Web.Controllers
         }
 
         /// <summary>
-		/// Shows the home page.
-		/// </summary>
-		/// <returns>the home page</returns>
+        /// Shows the home page.
+        /// </summary>
+        /// <returns>the home page</returns>
+        [HttpGet]
+        [Route("")]
         public IActionResult Index()
         {
             return View();
@@ -29,6 +32,8 @@ namespace SpaceX.Launch.Plan.Web.Controllers
 		/// Shows the error page.
 		/// </summary>
 		/// <returns>the error page</returns>
+        [HttpGet]
+        [Route("error")]
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

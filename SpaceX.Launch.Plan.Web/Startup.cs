@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using SpaceX.Launch.Plan.Web.Infrastructure;
 
 namespace SpaceX.Launch.Plan.Web
 {
@@ -11,19 +12,16 @@ namespace SpaceX.Launch.Plan.Web
 	/// </summary>
     public class Startup
     {
+        private readonly IConfiguration _configuration;
+
         /// <summary>
 		/// Initializes a new instance of the <see cref="Startup"/> class.
 		/// </summary>
 		/// <param name="configuration">the configuration</param>
         public Startup(IConfiguration configuration)
         {
-            Configuration = configuration;
+            _configuration = configuration;
         }
-
-        /// <summary>
-		/// Configuration 
-		/// </summary>
-        public IConfiguration Configuration { get; }
 
         /// <summary>
 		/// Adds services to the container.
@@ -31,6 +29,11 @@ namespace SpaceX.Launch.Plan.Web
 		/// <param name="services">the service collection</param>
         public void ConfigureServices(IServiceCollection services)
         {
+            services.Configure<SpaceXEndpointsOptions>(options =>
+            {
+                _configuration.GetSection("SpaceXEndpointsOptions").Bind(options);
+            });
+
             services.AddControllersWithViews();
         }
 
@@ -46,7 +49,7 @@ namespace SpaceX.Launch.Plan.Web
             }
             else
             {
-                app.UseExceptionHandler("/Home/Error");
+                app.UseExceptionHandler("/årror");
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }

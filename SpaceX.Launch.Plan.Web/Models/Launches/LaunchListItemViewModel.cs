@@ -21,10 +21,5 @@ namespace SpaceX.Launch.Plan.Web.Models.Launches
         /// Date/time UTC
         /// </summary>
         public DateTime DateUtc { get; set; }
-
-        /// <summary>
-        /// Flag indicating whether the launch is upcoming or not
-        /// </summary>
-        public bool Upcoming { get; set; }
     }
 }

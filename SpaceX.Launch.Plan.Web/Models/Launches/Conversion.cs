@@ -26,7 +26,6 @@ namespace SpaceX.Launch.Plan.Web.Models.Launches
                 Id = source.Id,
                 Name = source.Name,
                 DateUtc = source.DateUtc,
-                Upcoming = source.Upcoming,
             };
 
             return target;

@@ -23,9 +23,9 @@ namespace SpaceX.Launch.Plan.Web.Models.Launches
 
             var target = new LaunchListItemViewModel
             {
-                Id = source.Id,
+                FlightNumber = source.FlightNumber,
                 Name = source.Name,
-                DateUtc = source.DateUtc,
+                Date = source.DateUtc,
             };
 
             return target;

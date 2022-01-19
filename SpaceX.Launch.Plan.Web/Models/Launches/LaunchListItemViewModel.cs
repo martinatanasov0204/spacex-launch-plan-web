@@ -8,9 +8,9 @@ namespace SpaceX.Launch.Plan.Web.Models.Launches
     public class LaunchListItemViewModel
     {
         /// <summary>
-        /// ID
+        /// Flight number
         /// </summary>
-        public string Id { get; set; }
+        public int FlightNumber { get; set; }
 
         /// <summary>
         /// Name
@@ -18,8 +18,8 @@ namespace SpaceX.Launch.Plan.Web.Models.Launches
         public string Name { get; set; }
 
         /// <summary>
-        /// Date/time UTC
+        /// Date/time
         /// </summary>
-        public DateTime DateUtc { get; set; }
+        public DateTime Date { get; set; }
     }
 }
